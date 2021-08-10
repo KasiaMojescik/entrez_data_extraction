@@ -1,0 +1,18 @@
+biopython @ file:///D:/bld/biopython_1622747383361/work
+Bottleneck @ file:///C:/ci/bottleneck_1607557040328/work
+certifi==2021.5.30
+charset-normalizer==2.0.4
+dataclasses==0.6
+easy-entrez==0.2.2
+idna==3.2
+mkl-service==2.4.0
+numexpr @ file:///C:/ci/numexpr_1618856728739/work
+numpy @ file:///D:/bld/numpy_1626648564420/work
+pandas @ file:///C:/ci/pandas_1627570332296/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+requests==2.26.0
+six @ file:///tmp/build/80754af9/six_1623709665295/work
+typing-extensions==3.10.0.0
+urllib3==1.26.6
+wincertstore==0.2
