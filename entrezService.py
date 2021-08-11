@@ -11,6 +11,7 @@ class EntrezSearchService:
     def append_data(self, search, retstart, retmax, final):
         handle = Entrez.read(search)
         web_env = handle['WebEnv']
+        print("WebEnv: ", web_env)
         retstart += retmax
         try:
             final.append(handle['IdList'])

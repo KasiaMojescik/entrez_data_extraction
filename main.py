@@ -15,7 +15,11 @@ def main(db, retstart, retmax, totalRecords, query, email, fileName):
     print("Fetching start time: ", datetime.now())
     for search in rec_id_list:
         rec = entrez_service.fetch_rec(search)
-        records.extend(list(Medline.parse(rec)))
+        try:
+            records.extend(list(Medline.parse(rec)))
+        except:
+            print("Exception thrown at medline parsing")
+
     print("Fetching end time: ", datetime.now())
     print("Article appending start time: ", datetime.now())
     for article in records:
@@ -49,5 +53,5 @@ def main(db, retstart, retmax, totalRecords, query, email, fileName):
     print("Extraction to csv time: ", datetime.now())
 
 if __name__ == '__main__':
-    main("pmc", 0, 10, 20, "neuroscience", "your_email", "dataNLP")
+    main("pmc", 0, 10000, 100000, "neuroscience", "your_email", "dataNLP")
     # globals()[sys.argv[1]](sys.argv[2])(sys.argv[3])(sys.argv[4])(sys.argv[5])(sys.argv[6])(sys.argv[7])
